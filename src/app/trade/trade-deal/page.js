@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import TradeTabs from "./_components/TradeTabs";
+// import TradeTabs from "./_components/TradeTabs";
 import TradeForm from "./_components/TradeForm";
 import OrdersList from "./_components/OrdersList";
 import OrderBook from "./_components/OrderBook";
