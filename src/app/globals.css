@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+/* Main-Background => theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+.globe-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+}
+
+
+@layer base {
+  @font-face {
+    font-family: "AlexRegular";
+    src: url(../assets/fonts/static/Alexandria-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "AlexBold";
+    src: url(../assets/fonts/static/Alexandria-Bold.ttf) format("truetype");
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "AlexRegular";
+  /* max-width: 430px;
+  margin: 0 auto;
+  background: #000;
+  position: relative; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "AlexBold" !important;
+}
