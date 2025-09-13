@@ -68,7 +68,7 @@ export default function Order() {
           </div>
 
           {/* Orders list */}
-          <div className="flex-1 overflow-auto h-[600px] mt-3">
+          <div className="flex-1 overflow-auto  h-[600px] mt-3">
             {orders.map((o, idx) => (
               <OrderRow key={o.id} order={o} isFirst={idx === 0} />
             ))}
