@@ -1,12 +1,10 @@
-
 import { ArrowLeftRight, Star } from "lucide-react";
 import { FaRegUser } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <div className="w-full bg-black/30  border-solid border-[3px] border-[#232329] shadow-md">
+    <div className="w-full bg-black/30  border-solid border-[3px] border-[#232329] shadow-md rounded-[10px]">
       <div className="container mx-auto max-w-md h-12 mt-2 flex items-center justify-between px-3 text-white">
-        
         {/* Left Section */}
         <div className="flex items-center gap-2">
           <button className="w-8 h-8 flex items-center justify-center rounded-full bg-[#232329] text-[#73777A]">
