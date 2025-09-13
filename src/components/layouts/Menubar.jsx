@@ -21,7 +21,7 @@ const Footer = () => {
   if (mounted && hideMenuOn.includes(pathname)) return null;
 
   return (
-    <footer className="w-full fixed bottom-0 left-0 right-0 z-50  flex items-center justify-between px-7 rounded-b-[30px] py-5 bg-[#232329]">
+    <footer className="w-full fixed bottom-0 left-0 right-0 z-50  flex items-center justify-between px-7  py-5 bg-[#232329]">
       <Link href="/order" className="flex flex-col items-center gap-3">
         <OrdersIcon active={pathname === "/order"} />
         <span className="text-[9.5px] text-[#F9FAFB]">سفارشات</span>
