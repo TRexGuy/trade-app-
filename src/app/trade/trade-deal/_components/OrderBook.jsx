@@ -1,3 +1,4 @@
+'use client';
 const mockOrders = [
     { price: 2912734, amount: 0.0048, type: "sell" },
     { price: 2912734, amount: 0.0048, type: "sell" },

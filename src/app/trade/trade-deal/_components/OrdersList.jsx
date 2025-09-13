@@ -1,3 +1,4 @@
+'use client';
 import { NotepadText } from "lucide-react";
 
 export default function OrdersList() {
