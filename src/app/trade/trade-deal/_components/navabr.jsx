@@ -1,4 +1,4 @@
-'use client';
+
 import { ArrowLeftRight, Star } from "lucide-react";
 import { FaRegUser } from "react-icons/fa";
 
