@@ -1,7 +1,13 @@
 import React from 'react'
+import VideoCall from './ـcomponents/VideoCall'
 
 export default function EasyBuy() {
   return (
-    <div>EasyBuy</div>
+    <div>
+  {/* <Header />
+  <ChartPack />
+  <TradeForm/> */}
+  <VideoCall/>
+    </div>
   )
 }

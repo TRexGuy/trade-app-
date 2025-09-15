@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.12.1",
+    "@radix-ui/react-dialog": "^1.1.15",
     "apexcharts": "^5.3.4",
     "dayjs": "^1.11.13",
     "lucide-react": "^0.541.0",
