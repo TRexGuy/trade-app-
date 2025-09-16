@@ -187,19 +187,35 @@ export default function VideoCallScreen({ isOwner = true }) {
             {isOwner ? (
               // نمایش برای Owner
               <div className="relative w-full h-full">
-                <div className="absolute inset-0 bg-gray-600 flex items-center justify-center">
-                  <span className="text-2xl text-white">Your Screen Sharing</span>
-                </div>
+                {!isScreenSharing && (
+                  <video
+                    ref={remoteVideoRef}
+                    autoPlay
+                    muted
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                )}
                 {isScreenSharing && (
-                  <div className="absolute top-4 left-4 w-24 h-24 bg-blue-700 rounded-lg flex items-center justify-center">
-                    <span className="text-xs text-white">Your Video Feed</span>
+                  <div className="absolute inset-0 bg-gray-600">
+                    <video
+                      ref={screenShareVideoRef}
+                      autoPlay
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 left-4 w-24 h-24 bg-blue-700 rounded-lg overflow-hidden">
+                      <video
+                        ref={localVideoRef}
+                        autoPlay
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 )}
               </div>
             ) : (
               // نمایش برای User
               <div className="relative w-full h-full flex">
-                <div className="w-1/2 h-full bg-gray-700 flex items-center justify-center">
+                <div className="w-1/2 h-full bg-gray-700">
                   <video
                     ref={remoteVideoRef}
                     autoPlay
@@ -208,8 +224,12 @@ export default function VideoCallScreen({ isOwner = true }) {
                   />
                 </div>
                 {isScreenSharing && (
-                  <div className="w-1/2 h-full bg-gray-600 flex items-center justify-center">
-                    <span className="text-xl text-white">Owner Screen Sharing</span>
+                  <div className="w-1/2 h-full bg-gray-600">
+                    <video
+                      ref={screenShareVideoRef}
+                      autoPlay
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 )}
               </div>
