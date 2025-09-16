@@ -1,5 +1,5 @@
 import React from 'react'
-import VideoCall from './ـcomponents/VideoCall'
+import VideoCallAsl from './ـcomponents/VideoCallAsl'
 
 export default function EasyBuy() {
   return (
@@ -7,7 +7,7 @@ export default function EasyBuy() {
   {/* <Header />
   <ChartPack />
   <TradeForm/> */}
-  <VideoCall/>
+  <VideoCallAsl/>
     </div>
   )
 }
