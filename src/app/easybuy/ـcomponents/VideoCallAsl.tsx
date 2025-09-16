@@ -147,14 +147,18 @@ export default function VideoCallScreen({ isOwner = true }) {
             <div className="flex flex-row-reverse justify-center items-center gap-6">
               <div className="flex flex-col items-center">
                 <button className="p-5 bg-[#FFFFFF12] rounded-full transition-colors">
-                  <Mic className="w-6 h-6 text-gray-400" />
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 16.25C16.5 18.0449 15.0449 19.5 13.25 19.5H5.75C3.95507 19.5 2.5 18.0449 2.5 16.25V7.75C2.5 5.95507 3.95507 4.5 5.75 4.5H13.25C15.0449 4.5 16.5 5.95507 16.5 7.75V16.25ZM22.262 5.89334C22.4156 6.07414 22.5 6.30368 22.5 6.54096V17.4588C22.5 18.0111 22.0523 18.4588 21.5 18.4588C21.2627 18.4588 21.0332 18.3744 20.8524 18.2208L17.5 15.3709V8.62794L20.8524 5.77899C21.2732 5.42132 21.9043 5.47252 22.262 5.89334Z" fill="white"/>
+</svg>
                 </button>
                 <span className="mt-2 text-sm text-gray-400">Mute</span>
               </div>
 
               <div className="flex flex-col items-center">
                 <button className="p-5 bg-[#FFFFFF12] rounded-full transition-colors">
-                  <Video className="w-6 h-6 text-gray-400" />
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 16.25C16.5 18.0449 15.0449 19.5 13.25 19.5H5.75C3.95507 19.5 2.5 18.0449 2.5 16.25V7.75C2.5 5.95507 3.95507 4.5 5.75 4.5H13.25C15.0449 4.5 16.5 5.95507 16.5 7.75V16.25ZM22.262 5.89334C22.4156 6.07414 22.5 6.30368 22.5 6.54096V17.4588C22.5 18.0111 22.0523 18.4588 21.5 18.4588C21.2627 18.4588 21.0332 18.3744 20.8524 18.2208L17.5 15.3709V8.62794L20.8524 5.77899C21.2732 5.42132 21.9043 5.47252 22.262 5.89334Z" fill="white"/>
+</svg>
                 </button>
                 <span className="mt-2 text-sm text-gray-400">Video</span>
               </div>
@@ -236,16 +240,32 @@ export default function VideoCallScreen({ isOwner = true }) {
             )}
 
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-center items-center gap-6">
+            <div className="flex flex-col items-center">
+                <button
+                  className="p-5 bg-[#FD6161] rounded-full hover:bg-[#E04F4F] transition-colors shadow-lg"
+                  onClick={handleEndCall}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.9487 12.9931L21.7513 14.0297C21.5664 15.001 20.6588 15.6533 19.6305 15.5539L17.5841 15.3562C16.6923 15.27 15.9325 14.6366 15.7056 13.7902L15.0743 11.435C14.1398 11.0518 13.1099 10.8766 11.9845 10.9095C10.8591 10.9424 9.81232 11.1783 8.84412 11.6171L8.45304 13.8219C8.30481 14.6575 7.61525 15.2809 6.74193 15.3687L4.70741 15.5733C3.69224 15.6753 2.71891 15.0294 2.43031 14.0621L2.12104 13.0255C1.8132 11.9936 2.08792 10.9077 2.84222 10.1748C4.62301 8.44455 7.59203 7.57672 11.7493 7.57131C15.9126 7.56595 18.974 8.4285 20.9337 10.159C21.7582 10.8871 22.1443 11.9653 21.9487 12.9931Z" fill="white"/>
+                  </svg>
+                </button>
+                <span className="mt-2 text-sm text-gray-400">End Call</span>
+              </div>
               <div className="flex flex-col items-center">
                 <button className="p-5 bg-[#FFFFFF12] rounded-full transition-colors">
-                  <Mic className="w-6 h-6 text-gray-400" />
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.75 11C19.1297 11 19.4435 11.2822 19.4932 11.6482L19.5 11.75V12.25C19.5 15.8094 16.745 18.7254 13.251 18.9817L13.25 21.25C13.25 21.6642 12.9142 22 12.5 22C12.1203 22 11.8065 21.7178 11.7568 21.3518L11.75 21.25L11.75 18.9818C8.33323 18.7316 5.62283 15.938 5.50406 12.4863L5.5 12.25V11.75C5.5 11.3358 5.83579 11 6.25 11C6.6297 11 6.94349 11.2822 6.99315 11.6482L7 11.75V12.25C7 15.077 9.23445 17.3821 12.0336 17.4956L12.25 17.5H12.75C15.577 17.5 17.8821 15.2656 17.9956 12.4664L18 12.25V11.75C18 11.3358 18.3358 11 18.75 11ZM12.5 2C14.7091 2 16.5 3.79086 16.5 6V12C16.5 14.2091 14.7091 16 12.5 16C10.2909 16 8.5 14.2091 8.5 12V6C8.5 3.79086 10.2909 2 12.5 2Z" fill="white"/>
+</svg>
+
                 </button>
                 <span className="mt-2 text-sm text-gray-400">Mute</span>
               </div>
 
               <div className="flex flex-col items-center">
                 <button className="p-5 bg-[#FFFFFF12] rounded-full transition-colors">
-                  <Video className="w-6 h-6 text-gray-400" />
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 16.25C16.5 18.0449 15.0449 19.5 13.25 19.5H5.75C3.95507 19.5 2.5 18.0449 2.5 16.25V7.75C2.5 5.95507 3.95507 4.5 5.75 4.5H13.25C15.0449 4.5 16.5 5.95507 16.5 7.75V16.25ZM22.262 5.89334C22.4156 6.07414 22.5 6.30368 22.5 6.54096V17.4588C22.5 18.0111 22.0523 18.4588 21.5 18.4588C21.2627 18.4588 21.0332 18.3744 20.8524 18.2208L17.5 15.3709V8.62794L20.8524 5.77899C21.2732 5.42132 21.9043 5.47252 22.262 5.89334Z" fill="white"/>
+</svg>
                 </button>
                 <span className="mt-2 text-sm text-gray-400">Video</span>
               </div>
@@ -262,17 +282,7 @@ export default function VideoCallScreen({ isOwner = true }) {
                 <span className="mt-2 text-sm text-gray-400">Share Screen</span>
               </div>
 
-              <div className="flex flex-col items-center">
-                <button
-                  className="p-5 bg-[#FD6161] rounded-full hover:bg-[#E04F4F] transition-colors shadow-lg"
-                  onClick={handleEndCall}
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21.9487 12.9931L21.7513 14.0297C21.5664 15.001 20.6588 15.6533 19.6305 15.5539L17.5841 15.3562C16.6923 15.27 15.9325 14.6366 15.7056 13.7902L15.0743 11.435C14.1398 11.0518 13.1099 10.8766 11.9845 10.9095C10.8591 10.9424 9.81232 11.1783 8.84412 11.6171L8.45304 13.8219C8.30481 14.6575 7.61525 15.2809 6.74193 15.3687L4.70741 15.5733C3.69224 15.6753 2.71891 15.0294 2.43031 14.0621L2.12104 13.0255C1.8132 11.9936 2.08792 10.9077 2.84222 10.1748C4.62301 8.44455 7.59203 7.57672 11.7493 7.57131C15.9126 7.56595 18.974 8.4285 20.9337 10.159C21.7582 10.8871 22.1443 11.9653 21.9487 12.9931Z" fill="white"/>
-                  </svg>
-                </button>
-                <span className="mt-2 text-sm text-gray-400">End Call</span>
-              </div>
+        
             </div>
           </>
         )}

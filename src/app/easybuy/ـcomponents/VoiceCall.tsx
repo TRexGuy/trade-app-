@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Phone, Mic, Volume2, PhoneOff } from 'lucide-react';
+
 
 export default function VoiceCallScreen() {
   const [isCallActive, setIsCallActive] = useState(false);
