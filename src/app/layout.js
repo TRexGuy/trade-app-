@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         </main>
 
         {/* منو */}
-        {/* <Menubar /> */}
+        <Menubar />
       </body>
     </html>
   )
