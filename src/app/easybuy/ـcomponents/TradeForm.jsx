@@ -56,16 +56,16 @@ export default function TradeForm() {
        
        <button className="flex items-center gap-1 bg-[#1B1B1DA6] px-3 py-3 rounded-xl text-sm">
        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1_2913)">
+    <g clipPath="url(#clip0_1_2913)">
 <path d="M0 0H12V12H0V0Z" fill="#F7931A"/>
 <path d="M8.24194 4.4159H6.43394V9.3999H5.56194V4.4159H3.76994V3.7119H8.24194V4.4159Z" fill="#F5F5F5"/>
-</g>
-<defs>
-<clipPath id="clip0_1_2913">
-<rect width="12" height="12" rx="6" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+    </g>
+  <defs>
+  <clipPath id="clip0_1_2913">
+    <rect width="12" height="12" rx="6" fill="white"/>
+    </clipPath>
+  </defs>
+  </svg>
             تومان
 
 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
