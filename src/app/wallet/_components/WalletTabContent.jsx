@@ -1,42 +1,41 @@
-// WalletTabs.jsx
 "use client";
-import { useState } from "react";
-import WalletTabContent from "./WalletTabContent";
 
+import { Wallet, Send, ArrowDownToLine, Bitcoin } from "lucide-react";
 export default function WalletTabs() {
-  const [activeTab, setActiveTab] = useState("deposit");
+  
 
   return (
-    <>
-      <WalletTabContent activeTab={activeTab} />
+    <div className="w-full relative">
 
-      {/* منوی پایین ثابت */}
-      <div className="fixed bottom-4 left-0 w-full flex justify-center px-4 z-50">
-        <div className="flex w-full max-w-md border-2 border-[#31313a] bg-[#1B1B1DA6] rounded-xl overflow-hidden">
-          <button
-            type="button"
-            onClick={() => setActiveTab("deposit")}
-            className={`flex-1 py-3 text-sm font-medium transition-colors ${
-              activeTab === "deposit"
-                ? "bg-blue-400 text-white"
-                : "text-gray-400 hover:text-white"
-            }`}
-          >
-            تاریخچه واریز و برداشت
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab("history")}
-            className={`flex-1 py-3 text-sm font-medium transition-colors ${
-              activeTab === "history"
-                ? "bg-red-500 text-white"
-                : "text-gray-400 hover:text-white"
-            }`}
-          >
-            مشاهده
-          </button>
-        </div>
+        <div className="flex flex-col items-center gap-1 mb-10 mt-1.5border-2 border-[#31313a] bg-black/30 rounded-[10px] w-full">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="border-2 border-[#31313a] bg-black/30 rounded-[10px] w-full py-1.5 px-1.5">
+            <div className="w-full flex items-center gap-2">
+              <div className="w-[25px] h-[25px] flex items-center justify-center rounded-full bg-blue-400 ">
+                <Bitcoin className="text-white" />
+              </div>
+              <div className="w-full flex flex-col items-start gap-2">
+                <p className="font-medium text-[#DCDEE0]">بیت کوین</p>
+                <p className="text-sm text-[#A6AAAD]">BTC/IRR</p>
+              </div>
+              <div className="w-full">
+                <p className="font-bold text-[#DCDEE0]">12,34 ریال</p>
+                <p className="text-[#A6AAAD] text-sm">+37$</p>
+              </div>
+              <div className="w-full flex flex-col items-center gap-1.5">
+                <button className="w-full text-[#424547] border-solid border-2 border-blue-400  bg-blue-400 rounded-[8px]">واریز</button>
+
+                <button className="w-full text-white border-solid border-2 border-blue-400  rounded-[8px]">برداشت</button>
+              </div>
+              <button className="w-full py-[19px] text-white  border-2 border-[#31313a] bg-black/30 rounded-[10px] text-center">معامله</button>
+            </div>
+          </div>
+        ))}
       </div>
-    </>
+     
+
+
+
+    </div>
   );
 }

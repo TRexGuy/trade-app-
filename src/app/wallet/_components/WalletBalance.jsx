@@ -11,7 +11,7 @@ const data = [
 
 export default function WalletBalance() {
   return (
-    <div className="w-full flex-col flex items-center justify-between gap-4 border-2 border-[#31313a] bg-black/30 rounded-[10px] p-4">
+    <div className="w-full flex-col flex items-center justify-between  border-2 border-[#31313a] bg-black/30 rounded-[10px] p-4">
       {/* عنوان */}
       <div className="w-full text-start">
         <h2 className="text-[16px] text-[#DCDEE0]">دارایی :</h2>

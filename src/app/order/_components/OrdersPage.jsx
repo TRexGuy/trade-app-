@@ -38,7 +38,7 @@ export default function OrdersPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6 ">
-      <div className="w-[390px] h-screen overflow-hidden text-white flex flex-col">
+      <div className="w-[390px] h-screen overflow-hidden text-[#8C9094] flex flex-col">
         <TopBar title="سفارشات" />
 
         <div className="p-4 flex flex-col flex-1 h-full">
