@@ -21,13 +21,15 @@ const Footer = () => {
   if (mounted && hideMenuOn.includes(pathname)) return null;
 
   return (
-    <footer className="w-full fixed bottom-0 left-0 right-0 z-50  flex items-center justify-between px-7  py-5 bg-[#232329]">
+    <footer className="w-full fixed bottom-[-1px] left-0 right-0 z-50 flex items-center justify-between px-7 py-5 bg-[#232329B5] backdrop-blur-[5.3px]">
       <Link href="/order" className="flex flex-col items-center gap-3">
         <OrdersIcon active={pathname === "/order"} />
         <span className="text-[9.5px] text-[#F9FAFB]">سفارشات</span>
       </Link>
       <Link href="/trade" className="flex flex-col items-center gap-3">
-        <TradeIcon active={["/trade", "/trade/trade-deal"].includes(pathname)} />
+        <TradeIcon
+          active={["/trade", "/trade/trade-deal"].includes(pathname)}
+        />
         <span className="text-[9.5px] text-[#F9FAFB]">ترید</span>
       </Link>
       <Link href="/" className="flex flex-col items-center gap-3">
@@ -39,7 +41,7 @@ const Footer = () => {
         <span className="text-[9.5px] text-[#F9FAFB]">خرید/فروش آسان</span>
       </Link>
       <Link href="/wallet" className="flex flex-col items-center gap-3">
-        <WalletIcon active={pathname === "/wallet"} />
+        <WalletIcon active={pathname.startsWith("/wallet")} />
         <span className="text-[9.5px] text-[#F9FAFB]">کیف پول</span>
       </Link>
     </footer>

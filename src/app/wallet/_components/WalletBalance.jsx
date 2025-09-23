@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import WalletChart from "./WalletChart";
 
 const data = [
@@ -54,25 +55,30 @@ export default function WalletBalance() {
 
       {/* دکمه‌ها */}
       <div className="w-full flex items-center gap-5 my-2">
-        <button className="w-full text-white text-xs font-bold rounded-[8px] text-center py-3 border-solid border-2 bg-sky-400 border-sky-400">
+        <Link
+          href={"/wallet/transactions/deposit"}
+          className="w-full text-white text-xs font-bold rounded-[8px] text-center py-3 border-solid border-2 bg-sky-400 border-sky-400"
+        >
           واریز
-        </button>
-        <button className="w-full text-white text-xs font-bold rounded-[8px] text-center py-3 border-solid border-2 border-sky-400">
+        </Link>
+        <Link
+          href={"/wallet/transactions/withdraw"}
+          className="w-full text-white text-xs font-bold rounded-[8px] text-center py-3 border-solid border-2 border-sky-400"
+        >
           برداشت
-        </button>
+        </Link>
       </div>
       <div className="w-full flex items-center gap-2.5 px-2">
-     <div className="w-[25px]"></div> {/* جای آیکون */}
-    <div className="w-full flex flex-col items-start">
-       <p className="text-[#A6AAAD] text-sm">نام ارز</p>
-     </div>
-    <div className="w-full">
-     <p className="text-[#A6AAAD] text-sm">کل موجودی</p>
-   </div>
-   <div className="w-full"></div> {/* برای واریز / برداشت */}
-     <div className="w-full"></div> {/* برای دکمه معامله */}
-  </div>
+        <div className="w-[25px]"></div> {/* جای آیکون */}
+        <div className="w-full flex flex-col items-start">
+          <p className="text-[#A6AAAD] text-sm text-nowrap">نام ارز</p>
+        </div>
+        <div className="w-full">
+          <p className="text-[#A6AAAD] text-sm text-nowrap">کل موجودی</p>
+        </div>
+        <div className="w-full"></div> {/* برای واریز / برداشت */}
+        <div className="w-full"></div> {/* برای دکمه معامله */}
+      </div>
     </div>
-
   );
 }

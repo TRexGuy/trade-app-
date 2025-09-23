@@ -11,8 +11,8 @@ export default function WalletPage() {
       {/* Scrollable content */}
       <div className="h-full overflow-y-auto flex flex-col p-4 gap-4 pb-32">
         <WalletHeader />
-    <WalletBalance />
-        <WalletTabs /> 
+        <WalletBalance />
+        <WalletTabs />
       </div>
     </div>
   );

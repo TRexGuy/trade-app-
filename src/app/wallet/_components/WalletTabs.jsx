@@ -1,44 +1,25 @@
 "use client";
 import { useState } from "react";
 import WalletTabContent from "./WalletTabContent";
-import { Wallet, Send, ArrowDownToLine, Bitcoin } from "lucide-react";
+import Link from "next/link";
 export default function WalletTabs() {
   const [activeTab, setActiveTab] = useState("deposit");
 
   return (
-    <div className="w-full relative">
+    <div className="w-full flex flex-col items-center">
       {/* محتوای تب‌ها */}
-
-        <WalletTabContent activeTab={activeTab} />
-
-     
-
+      <WalletTabContent activeTab={activeTab} />
       {/* منوی پایین ثابت */}
-      <div className="bottom-4 left-0 w-full flex justify-center px-4 z-50">
-        <div className="flex py-2 px-2 w-full max-w-md border-2 border-[#31313a] bg-[#1B1B1DA6] rounded-xl overflow-hidden">
-          <button
-            type="button"
-            onClick={() => setActiveTab("deposit")}
-            className={`flex-1 py-3  rounded-md text-sm font-medium transition-colors ${
-              activeTab === "deposit"
-                ? "bg-blue-400 text-white"
-                : "text-gray-400 hover:text-white"
-            }`}
-          >
-            تاریخچه واریز و برداشت
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab("history")}
-            className={`flex-1 py-3 text-sm  rounded-md font-medium transition-colors ${
-              activeTab === "history"
-                ? "bg-red-500 text-white"
-                : "text-gray-400 hover:text-white"
-            }`}
-          >
-            مشاهده
-          </button>
-        </div>
+      <div className="w-full flex items-center justify-between px-4 py-2 border-2 border-[#31313a] bg-[#1B1B1DA6] rounded-[10px]">
+        <span className="text-sm font-medium text-[#B0B0B8]">
+          تاریخچه واریز و برداشت
+        </span>
+        <Link
+          href={"/wallet/transactions/transaction-history"}
+          className="py-2 px-10 bg-sky-400 rounded-[10px]"
+        >
+          مشاهده
+        </Link>
       </div>
     </div>
   );
