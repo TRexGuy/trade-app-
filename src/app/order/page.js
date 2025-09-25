@@ -5,7 +5,6 @@ import Tabs from './_components/Tabs'
 import Filters from './_components/Filters'
 import OrderRow from './_components/OrderRow'
 import FillCaretDown from "../../assets/icons/FillCaretDown"
-// import { GlobeBackgroundWrapper } from '../../assets/backGround/GlobeBackgroundWrapper'
 
 const SAMPLE = Array.from({ length: 100 }).map((_, i) => ({
   id: String(i + 1),
@@ -18,7 +17,7 @@ const SAMPLE = Array.from({ length: 100 }).map((_, i) => ({
 }))
 
 export default function Order() {
-  const [tab, setTab] = useState('open')   // 👈 اینو اضافه کن
+  const [tab, setTab] = useState('open')
   const [query, setQuery] = useState('')
 
   const orders = useMemo(() => {
@@ -31,25 +30,20 @@ export default function Order() {
       return filtered.filter(o => o.status !== 'در حال انجام')
     }
     if (tab === 'trades') {
-      return filtered // اینجا می‌تونی فیلتر خاص ترید بزنی
+      return filtered
     }
     return filtered
   }, [query, tab])
 
   return (
     <div className="h-screen bg-panel p-4 shadow-xl overflow-hidden relative flex flex-col">
-      {/* Background */}
-      {/* <GlobeBackgroundWrapper /> */}
-
       {/* محتوا */}
       <div className="relative z-10 flex flex-col flex-1">
         <TopBar title="سفارشات" />
 
         <div>
           <div className="flex w-full flex-col mt-6 items-center bg-black/30 border-solid border-[3px] border-[#232329] rounded-t-[30px] py-2">
-            {/* 👇 اینجا باید value و onChange پاس بدی */}
             <Tabs value={tab} onChange={setTab} />
-
             <div className="mt-3 flex mr-3 w-full">
               <Filters query={query} setQuery={setQuery} />
             </div>
