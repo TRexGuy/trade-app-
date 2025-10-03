@@ -19,7 +19,7 @@ export default function TradeDealPage() {
               </Suspense>
             </div>
           </div>
-          {/* <OrdersList /> */}
+          <OrdersList />
         </div>
       </div>
     </div>
