@@ -9,21 +9,14 @@ import NetworkIcon from "../../../../../components/elements/NetworkIcon";
 import CashIcon from "../../../../../components/elements/CashIcon";
 
 export default function WithdrawCoinTab() {
-  const router = useRouter();
+
 
   const [coin, setCoin] = useState("BTC");
   const [network, setNetwork] = useState("BTC");
   const [amount, setAmount] = useState(300000);
   const [walletAddress, setWalletAddress] = useState("bnb13eqrynp3rls3m6dsw58d3y5l7z6zfdw5zj3ssddy");
 
-  const handleWithdraw = () => {
-    const status = Math.random() > 0.5 ? "success" : "failed";
-    const currency = coin;
 
-    router.push(
-      `/wallet/transactions/result?status=${status}&amount=${amount}&currency=${currency}&walletAddress=${walletAddress}&txId=TX123456789`
-    );
-  };
 
   return (
     <div className="w-full flex flex-col items-center gap-6">
@@ -112,7 +105,7 @@ export default function WithdrawCoinTab() {
       </div>
 
       <button
-        onClick={handleWithdraw}
+     
         className="text-[16px] w-full font-extrabold text-[#2A2C2E] bg-sky-400 shadow-[0_0px_30px_-18px_rgba(0,0,0,0.3)] shadow-sky-400 p-3 rounded-xl"
       >
         برداشت

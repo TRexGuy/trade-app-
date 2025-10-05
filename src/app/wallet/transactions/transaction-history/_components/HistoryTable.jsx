@@ -1,7 +1,16 @@
 import React from "react";
 
-export default function HistoryTable() {
-  const fakeRows = Array.from({ length: 15 });
+export default function HistoryTable({ onShowDetails }) {
+
+  const fakeRows = Array.from({ length: 15 }).map((_, index) => ({
+    date: "۱۴۰۱.۳.۹",
+    time: "۱۱:۲۵:۴۳",
+    status: "موفق",
+    amount: "۱,۳۶۵,۰۰۰",
+    currency: "تومان",
+    trackingCode: "۹۷۶۵۳۴۲۰۰۱۸۲۷۶",
+    cardOrIban: "IR123456789012345678901234",
+  }));
 
   return (
     <table className="w-full flex flex-col items-center gap-1">
@@ -15,7 +24,7 @@ export default function HistoryTable() {
         </tr>
       </thead>
       <tbody className="w-full flex flex-col items-center gap-2 bg-black/50 border-solid border-2 border-[#232329] rounded-b-lg p-2">
-        {fakeRows.map((_, index) => {
+        {fakeRows.map((row, index) => {
           const isLast = index === fakeRows.length - 1;
           return (
             <tr
@@ -25,17 +34,20 @@ export default function HistoryTable() {
               }`}
             >
               <td className="flex flex-col items-center gap-0.5">
-                <span>۱۴۰۱.۳.۹</span>
-                <span>۱۱:۲۵:۴۳</span>
+                <span>{row.date}</span>
+                <span>{row.time}</span>
               </td>
-              <td className="text-green-600">موفق</td>
+              <td className="text-green-600">{row.status}</td>
               <td className="flex flex-col items-center gap-0.5">
-                <span>۱,۳۶۵,۰۰۰</span>
-                <span>تومان</span>
+                <span>{row.amount}</span>
+                <span>{row.currency}</span>
               </td>
-              <td>۹۷۶۵۳۴۲۰۰۱۸۲۷۶</td>
+              <td>{row.trackingCode}</td>
               <td>
-                <button className="bg-sky-400 text-white rounded-md py-2 px-3">
+                <button
+                  className="bg-sky-400 text-white rounded-md py-2 px-3"
+                  onClick={() => onShowDetails(row)} 
+                >
                   جزئیات
                 </button>
               </td>

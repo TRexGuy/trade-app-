@@ -10,18 +10,7 @@ import { IoInformationCircleSharp } from "react-icons/io5";
 import { useRouter } from "next/navigation"; 
 
 export default function WithdrawFiatTab() {
-  const router = useRouter();
 
-  const handlePay = () => {
-    // انتخاب تصادفی موفق یا ناموفق
-    const status = Math.random() > 0.5 ? "success" : "failed";
-
-    // ❌ دیگه آبجکت نده، فقط string
-    router.push(
-      `/wallet/transactions/result?status=${status}&amount=300000&currency=تومان&date=1402/07/08&time=11:45:20&cardOrIban=1234-5678-9012-3456`
-    );
-    
-  };
 
   return (
     <div className="w-full flex flex-col items-center gap-6">
@@ -97,7 +86,7 @@ export default function WithdrawFiatTab() {
 
       {/* دکمه پرداخت */}
       <button
-        onClick={handlePay}
+     
         className="text-[16px] w-full font-extrabold text-[#2A2C2E] bg-sky-400 shadow-[0_0px_30px_-18px_rgba(0,0,0,0.3)] shadow-sky-400 p-3 rounded-xl"
       >
         پرداخت
