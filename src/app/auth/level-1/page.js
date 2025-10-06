@@ -12,7 +12,7 @@ export default function Page() {
 
   return (
     <div className="w-full flex flex-col items-center gap-1.5">
-      <RoadMapBar />
+      <RoadMapBar currentStep={step} />
       <div className="w-full flex flex-col items-center p-3 gap-4 border-2 border-[#31313a] rounded-b-[10px] bg-black/30">
         {step === 0 && <MailStep onNext={nextStep} />}
         {step === 1 && <IdentityInformationStep onNext={nextStep} />}

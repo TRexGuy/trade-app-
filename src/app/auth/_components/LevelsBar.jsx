@@ -1,5 +1,5 @@
-import LinearProgress from "../../../components/elements/LinearProgress";
 import React from "react";
+import LinearProgress from "../../../components/elements/LinearProgress";
 import Level1Icon from "../../../components/elements/Level1Icon";
 import Level2Icon from "../../../components/elements/Level2Icon";
 import Level3Icon from "../../../components/elements/Level3Icon";
