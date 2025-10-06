@@ -14,7 +14,10 @@ export default function WalletHeader() {
       <div className="w-full text-center">
         <h2 className="text-lg text-[#A6AAAD]">جزییات</h2>
       </div>
-      <div className="gap-3 flex-row text-[#A6AAAD] flex cursor-pointer" onClick={handleBack}>
+      <div
+        className="gap-3 flex-row text-[#A6AAAD] flex cursor-pointer"
+        onClick={handleBack}
+      >
         <span>بازگشت</span>
         <Backicon />
       </div>

@@ -8,7 +8,7 @@ export default function ResultPage() {
 
   return (
     <div className="w-full h-screen gap-16 overflow-y-auto flex flex-col items-center  p-4 pb-28">
-        <ResultHeader />
+      <ResultHeader />
       <TransactionResult
         status={searchParams.get("status") ?? "failed"}
         amount={searchParams.get("amount") ?? "0"}
