@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Icon from "../../../../assets/icons/AiOutlineInfoCircle";
-
+import { SlArrowRight } from "react-icons/sl";
 export default function BankingInformationStep({ onPrev }) {
   const router = useRouter(); // ✅ برای ریدایرکت
   const [step, setStep] = useState(1);
+  
   const [formData, setFormData] = useState({
     cardNumber: "",
     shebaNumber: "",
@@ -22,9 +23,11 @@ export default function BankingInformationStep({ onPrev }) {
     e.preventDefault();
     setStep(2);
   };
-
+  const handlePrevStep = () => {
+    setSubStep(1);
+  };
   const handleContinue = () => {
-    router.push("/auth/level-2"); // ✅ انتقال به مرحله بعد
+    router.push("/auth/level-2"); 
   };
 
   return (
@@ -36,14 +39,15 @@ export default function BankingInformationStep({ onPrev }) {
 
           {/* متن راهنما */}
           <div className="flex flex-col gap-2 text-gray-400">
-            <div className="flex items-start gap-2">
-              <div className="w-[20px] h-[20px] flex items-center justify-center rounded-full bg-sky-400 text-black font-bold text-sm">
-                !
-              </div>
-              <p className="text-sm leading-relaxed">
-                کاربر گرامی لطفاً جهت تکمیل فرآیند احراز هویت، کارتی به نام خودتان ثبت کنید.
-              </p>
-            </div>
+          <div className="flex sm:mt-2  gap-2">
+  <div className="w-[20px]  h-[20px] flex-shrink-0 flex items-center justify-center rounded-full bg-sky-400 text-black font-bold text-sm">
+    !
+  </div>
+  <p className="text-sm leading-relaxed">
+    کاربر گرامی لطفاً جهت تکمیل فرآیند احراز هویت، کارتی به نام خودتان ثبت کنید.
+  </p>
+</div>
+
 
             <div className="flex items-start gap-2">
               <div className="w-[20px] h-[20px] flex items-center justify-center rounded-full bg-sky-400 text-black font-bold text-sm">
@@ -84,16 +88,19 @@ export default function BankingInformationStep({ onPrev }) {
           {/* دکمه‌ها */}
           <button
             type="submit"
-            className="w-full bg-blue-400 text-black font-bold py-3 rounded-xl hover:bg-blue-300 transition-all"
+            className="w-full bg-blue-400 text-white font-bold py-3 rounded-xl hover:bg-blue-300 transition-all"
           >
             تایید و ادامه
           </button>
 
-          <div
-            onClick={onPrev}
-            className="text-blue-400 text-sm text-center cursor-pointer"
-          >
-            مرحله قبل ←
+          <div className="w-full flex flex-row gap-1 justify-start items-center">
+          <SlArrowRight />
+            <button
+              onClick={handlePrevStep}
+              className="text-xs font-semibold text-sky-400"
+            >
+              مرحله قبل
+            </button>
           </div>
         </form>
       )}
@@ -106,7 +113,7 @@ export default function BankingInformationStep({ onPrev }) {
             <span>اطلاعات بانکی شما تایید شد</span>
           </div>
 
-          <div className="bg-[#2C2B25] border-2 border-blue-400 rounded-2xl p-6 text-gray-200 flex flex-col gap-4 text-base">
+          <div className="w-full bg-sky-400/35 text-white border-solid border-[1px] border-sky-400 rounded-[15px] text-center py-3.5 px-2 flex flex-col gap-4 text-base">
             <div className="flex justify-between">
               <span>شماره کارت:</span>
               <span className="font-semibold">{formData.cardNumber}</span>
@@ -119,16 +126,20 @@ export default function BankingInformationStep({ onPrev }) {
 
           <button
             onClick={handleContinue}
-            className="w-full bg-blue-400 text-black font-bold py-3 rounded-xl hover:bg-blue-300 transition-all"
+            className="w-full bg-blue-400 text-white font-bold py-3 rounded-xl hover:bg-blue-300 transition-all"
           >
             تایید و ادامه
           </button>
 
-          <div
-            onClick={() => setStep(1)}
-            className="text-blue-400 text-sm text-center cursor-pointer"
-          >
-            مرحله قبل ←
+     
+          <div className="w-full flex flex-row gap-1 justify-start items-center">
+          <SlArrowRight />
+            <button
+              onClick={handlePrevStep}
+              className="text-xs font-semibold text-sky-400"
+            >
+              مرحله قبل
+            </button>
           </div>
         </div>
       )}

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import SmartSelect from "../../../../components/partials/SmartSelect";
 import SmartInput from "../../../../components/partials/SmartInput";
 import { IoCheckmarkCircle } from "react-icons/io5";
-
+import { SlArrowRight } from "react-icons/sl";
 export default function IdentityInformationStep({ onNext }) {
   const [subStep, setSubStep] = useState(1);
 
@@ -60,11 +60,12 @@ export default function IdentityInformationStep({ onNext }) {
           />
           <button
             onClick={handleFormSubmit}
-            className="w-full text-center py-3.5 bg-sky-400 rounded-xl text-[16px] font-extrabold text-[#2A2C2E]"
+            className="w-full text-center py-3.5 bg-sky-400 rounded-xl text-[16px] font-extrabold text-white"
           >
             تایید و ادامه
           </button>
-          <div className="w-full flex justify-start items-center">
+          <div className="w-full flex flex-row gap-1 justify-start items-center">
+          <SlArrowRight />
             <button
               onClick={handlePrevStep}
               className="text-xs font-semibold text-sky-400"
@@ -76,6 +77,7 @@ export default function IdentityInformationStep({ onNext }) {
       )}
       {subStep === 2 && (
         <div className="w-full flex flex-col items-center gap-10">
+          
           <div className="w-full flex flex-col items-start gap-4">
             <div className="w-full flex items-center justify-start gap-2">
               <IoCheckmarkCircle size={25} className="text-[#16C784]" />
@@ -140,11 +142,21 @@ export default function IdentityInformationStep({ onNext }) {
           </div>
           <button
             onClick={onNext}
-            className="w-full text-[16px] font-extrabold text-[#2A2C2E] bg-sky-400 rounded-[10px] text-center py-2.5"
+            className="w-full text-[16px] font-extrabold text-white bg-sky-400 rounded-[10px] text-center py-2.5"
           >
             ادامه
           </button>
+          <div className="w-full flex flex-row gap-1 justify-start items-center">
+          <SlArrowRight />
+            <button
+              onClick={handlePrevStep}
+              className="text-xs font-semibold text-sky-400"
+            >
+              مرحله قبل
+            </button>
+          </div>
         </div>
+        
       )}
     </div>
   );

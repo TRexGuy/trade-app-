@@ -43,13 +43,13 @@ export default function LevelsBar() {
             key={level.id}
             className={`flex flex-col items-center gap-2 rounded-[8px] p-3 transition-all duration-200 ${
               activeLevel === level.id
-                ? "bg-sky-400 text-black"
+                ? "bg-sky-400 text-white"
                 : "bg-transparent text-[#73777A]"
             }`}
           >
             <div
               className={`transition-all duration-200 ${
-                activeLevel === level.id ? "text-black" : "text-[#73777A]"
+                activeLevel === level.id ? "text-white" : "text-[#73777A]"
               }`}
             >
               {level.icon}

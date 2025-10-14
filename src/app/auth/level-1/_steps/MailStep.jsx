@@ -36,7 +36,7 @@ export default function MailStep({ onNext }) {
           </label>
           <button
             onClick={handleEmailSubmit}
-            className="w-full text-[16px] font-extrabold text-[#2A2C2E] bg-sky-400 rounded-[10px] text-center py-2.5"
+            className="w-full text-[16px] font-extrabold text-white bg-sky-400 rounded-[10px] text-center py-2.5"
           >
             تایید
           </button>
@@ -94,7 +94,7 @@ export default function MailStep({ onNext }) {
           <div className="w-full flex flex-col items-center gap-4">
             <button
               onClick={handleCodeSubmit}
-              className="w-full text-[16px] font-extrabold text-[#2A2C2E] bg-sky-400 rounded-[10px] text-center py-2.5"
+              className="w-full text-[16px] font-extrabold text-white bg-sky-400 rounded-[10px] text-center py-2.5"
             >
               تایید
             </button>
@@ -127,7 +127,7 @@ export default function MailStep({ onNext }) {
           </div>
           <button
             onClick={onNext}
-            className="w-full text-[16px] font-extrabold text-[#2A2C2E] bg-sky-400 rounded-[10px] text-center py-2.5"
+            className="w-full text-[16px] font-extrabold text-white bg-sky-400 rounded-[10px] text-center py-2.5"
           >
             ادامه
           </button>
