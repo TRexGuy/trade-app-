@@ -3,17 +3,17 @@
 import { useState } from "react";
 
 // 🔹 Step 0 - Landline
-import LandlinePhone from "./_seteps/Landlinephone";
+import LandlinePhone from "./_components/Landlinephone";
 import VerifyCode from "./_components/VerifiedCode";
 import Verified from "./_components/Verified";
 
 // 🔹 Step 1 - ID Card
-import UploadIdCard from "./_seteps/IdCart";
+import UploadIdCard from "./_components/IdCart";
 import IdCardVerified from "./_components/IdCardVerified";
 import WaitingApproval from "./_components/WaitingApproval";
 
 // 🔹 Step 2 - Authentication
-import Authentication from "./_seteps/Authentication";
+import Authentication from "./_components/Authentication";
 import AuthenticationVerified from "./_components/AuthenticationVerified";
 import WaitingApprovalSelfile from "./_components/WaitingApprovalSelfile";
 
