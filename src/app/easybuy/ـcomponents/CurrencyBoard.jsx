@@ -12,7 +12,7 @@ export default function CurrencyBoard() {
      <span>   ۲۵,۴۵۶,۲۶۰ ریال</span>  
         </div >
       {/* دکمه انتخاب ارز */}
-  <div className="flex flex-col" >
+  <div className="flex  text-gray-300 flex-col" >
    <p>تغییر۲۴ ساعته</p>
 
   <span className="text-green-400  flex flex-row-reverse font-bold text-lg"> ۴۴٪.0+</span>

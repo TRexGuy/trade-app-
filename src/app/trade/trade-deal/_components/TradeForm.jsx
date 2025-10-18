@@ -35,7 +35,7 @@ function TradeFields({ type, formData, setFormData }) {
           name="orderType"
           value={orderType}
           onChange={handleChange}
-          className="w-full  p-2 text-sm border-solid border-[3px] border-[#31313a] bg-[#1B1B1DA6] rounded-lg  outline-none focus:ring-2 focus:ring-[#00CFFF]"
+          className="w-full  text-gray-300 p-2 text-sm border-solid border-[3px] border-[#31313a] bg-[#1B1B1DA6] rounded-lg  outline-none focus:ring-2 focus:ring-[#00CFFF]"
         >
           <option value="limit">محدود</option>
           <option value="market">بازار</option>
@@ -50,7 +50,7 @@ function TradeFields({ type, formData, setFormData }) {
           name="price"
           value={price}
           onChange={handleChange}
-          className="w-full  p-2 text-sm border-solid border-[3px] border-[#31313a] bg-[#1B1B1DA6] rounded-lg  outline-none focus:ring-2 focus:ring-[#00CFFF]"
+          className="w-full text-gray-300 p-2 text-sm border-solid border-[3px] border-[#31313a] bg-[#1B1B1DA6] rounded-lg  outline-none focus:ring-2 focus:ring-[#00CFFF]"
           placeholder="قیمت (ریال)"
         />
         <p className="text-[#73777A] text-xs mt-1">
@@ -66,13 +66,13 @@ function TradeFields({ type, formData, setFormData }) {
           name="amount"
           value={amount}
           onChange={handleChange}
-          className="w-full  p-2 text-sm border-solid border-[3px] border-[#31313a] bg-[#1B1B1DA6] rounded-lg  outline-none focus:ring-2 focus:ring-[#00CFFF]"
+          className="w-full text-gray-300  p-2 text-sm border-solid border-[3px] border-[#31313a] bg-[#1B1B1DA6] rounded-lg  outline-none focus:ring-2 focus:ring-[#00CFFF]"
           placeholder="مقدار (ETH)"
         />
       </div>
 
       {/* درصدهای سریع */}
-      <div className="flex text-xs justify-between gap-2">
+      <div className="flex  text-gray-300 text-xs justify-between gap-2">
         {[
           { label: "۲۵%", value: 0.25 },
           { label: "۵۰%", value: 0.5 },
@@ -127,7 +127,7 @@ export default function TradeForm() {
   return (
     <div className="w-full max-w-md mx-auto space-y-4 p-4">
       {/* تب‌ها */}
-      <div className="w-full max-w-md mx-auto flex bg-[#1B1B1DA6] rounded-xl p-1">
+      <div className="w-full text-gray-300 max-w-md mx-auto flex bg-[#1B1B1DA6] rounded-xl p-1">
         <button
           onClick={() => setTab("buy")}
           className={`flex-1 py-2 rounded-lg ${

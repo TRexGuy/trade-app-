@@ -50,11 +50,11 @@ export default function OrdersPage() {
 
           {/* هدر ستون‌ها */}
           <div className="mt-4 text-xs flex items-center border-b border-[#232329] pb-2 text-gray-400">
-            <div className="w-20">تاریخ</div>
-            <div className="w-20 text-center">سمت</div>
-            <div className="flex-1 text-center">مقدار</div>
-            <div className="w-28 text-center">وضعیت</div>
-            <div className="w-20 text-center"></div>
+            <div className="w-20 text-gray-300 ">تاریخ</div>
+            <div className="w-20 text-gray-300 text-center">سمت</div>
+            <div className="flex-1 text-gray-300 text-center">مقدار</div>
+            <div className="w-28 text-gray-300 text-center">وضعیت</div>
+            <div className="w-20 text-gray-300 text-center"></div>
           </div>
 
           {/* لیست سفارش‌ها */}

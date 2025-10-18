@@ -42,7 +42,7 @@ export default function TradeForm() {
       <div className="flex flex-col gap-2">
         <div className="flex flex-row  gap-10">
         <label className="text-gray-400 text-sm">پرداخت می‌کنم</label>
-        <span className="">۱۳۲۴۵۰ <span className="text-[#00CFFF]">همه موجودی</span></span>
+        <span className="text-gray-300">۱۳۲۴۵۰ <span className="text-[#00CFFF]">همه موجودی</span></span>
         </div>
 
         <div className="flex items-center gap-3">
@@ -54,7 +54,7 @@ export default function TradeForm() {
             className="flex-1 border-solid border-[3px] border-[#31313a] bg-[#1B1B1DA6]  focus:ring-2 focus:ring-[#00CFFF] rounded-2xl px-4 py-3 outline-none text-right text-white text-lg placeholder-gray-500"
           />
        
-       <button className="flex items-center gap-1 bg-[#1B1B1DA6] px-3 py-3 rounded-xl text-sm">
+       <button className="flex items-center text-gray-300 gap-1 bg-[#1B1B1DA6] px-3 py-3 rounded-xl text-sm">
        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_1_2913)">
 <path d="M0 0H12V12H0V0Z" fill="#F7931A"/>
@@ -91,7 +91,7 @@ export default function TradeForm() {
           
         <button
             type="button"
-            className="flex items-center gap-1 bg-[#1B1B1DA6] px-3 py-3 rounded-xl text-sm"
+            className="flex text-gray-300 items-center gap-1 bg-[#1B1B1DA6] px-3 py-3 rounded-xl text-sm"
           >
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_1_2927)">

@@ -13,12 +13,12 @@
 } */
 
 /* Main-Background => theme */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 .globe-container {
   position: fixed;
   top: 0;

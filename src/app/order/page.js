@@ -52,12 +52,12 @@ export default function Order() {
           {/* Header row */}
           <div className="mt-4 text-xs text-muted flex items-center pb-2">
             <div className="w-20 gap-1 items-center justify-center flex flex-row">
-              <span className="font-bold">تاریخ</span>
+              <span className="font-bold text-gray-300 ">تاریخ</span>
               <FillCaretDown />
             </div>
-            <div className="w-20 font-bold text-left">سمت</div>
-            <div className="w-24 font-bold text-left">مقدار</div>
-            <div className="w-32 font-bold text-left">وضعیت</div>
+            <div className="w-20 font-bold text-gray-300 text-left">سمت</div>
+            <div className="w-24 font-bold text-gray-300 text-left">مقدار</div>
+            <div className="w-32 font-bold text-gray-300 text-left">وضعیت</div>
             <div className="w-20" aria-hidden="true" />
           </div>
 

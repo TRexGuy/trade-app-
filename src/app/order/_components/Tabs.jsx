@@ -11,7 +11,7 @@ export default function Tabs({ value, onChange }) {
         <button
           key={tab.key}
           onClick={() => onChange(tab.key)}
-          className={`text-xs cursor-pointer p-2 rounded-md transition-colors duration-200
+          className={`text-xs cursor-pointer text-gray-300 p-2 rounded-md transition-colors duration-200
             ${value === tab.key ? "bg-[#31dfeb]" : "text-white hover:bg-[#01e4f8]"}`}
         >
           {tab.label}
