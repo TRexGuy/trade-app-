@@ -17,7 +17,7 @@ export default function SupportPage() {
 
         <div className="flex flex-col ">
           <Link
-            href="/new-ticket"
+            href="ticket/newticket"
             className="flex items-center justify-between px-4 py-5 hover:bg-[#232329] transition"
           >
             <span>ارسال تیکت</span>

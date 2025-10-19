@@ -33,11 +33,11 @@ const tickets = [
         {filteredTickets.map((ticket) => (
           <div
             key={ticket.id}
-            className="grid grid-cols-5 items-center py-3 px-3 text-center border-t border-[#2A2A2D]"
+            className="grid grid-cols-5  items-center py-3 px-3 text-center border-t border-[#2A2A2D]"
           >
             <span className="text-gray-300">{ticket.id}</span>
-            <span>{ticket.title}</span>
-            <span>{ticket.section}</span>
+            <span className="text-gray-300">{ticket.title}</span>
+            <span className="text-gray-300">{ticket.section}</span>
             <span className="text-gray-400">{ticket.date}</span>
             <span className="flex justify-center">
               <button className="text-blue-400 hover:underline">مشاهده</button>
